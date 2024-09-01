@@ -67,6 +67,7 @@ window.addEventListener("resize", function () {
 });
 
 var audio = new Audio('music.mp3');
+audio.play()
 
 function playMusic() {
     audio.play().catch(function(error) {
