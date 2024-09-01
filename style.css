@@ -12,6 +12,16 @@ h2{
     margin: 0.5rem;
 }
 
+@media only screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.25rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+}
+
 body {
     background: #FFFCD5;
     overflow: hidden!important;
@@ -36,10 +46,12 @@ body, .main {
     text-align: center;
     justify-content: center;
 }
-.block-2{
-    display: none;
-}
+
 .block-2 svg {
     height: 80%;
-    margin: auto 0;
+    margin: auto;
+}
+
+path {
+    opacity: 0;
 }
