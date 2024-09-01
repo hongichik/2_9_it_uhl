@@ -52,11 +52,13 @@ function initializeTyped() {
     document.getElementById('text-1').innerHTML = '';
 
     setTimeout(function () {
+
         new Typed("#text-1", options_1);
     }, 1000);
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+
     initializeTyped();
 });
 
@@ -64,3 +66,15 @@ window.addEventListener("resize", function () {
     initializeTyped();
 });
 
+var audio = new Audio('music.mp3');
+
+function playMusic() {
+    audio.play().catch(function(error) {
+        console.log('Playback failed:', error);
+    });
+}
+
+document.addEventListener('click', function() {
+    playMusic();
+    document.removeEventListener('click', arguments.callee);
+});
